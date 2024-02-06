@@ -73,7 +73,7 @@ namespace dotnet_api_starter.Controllers
 
 
         [HttpPost("CreateUser")]
-        public async Task<Boolean> CreateUser(PostCreateUserInput postCreateUserInput)
+        public async Task<string> CreateUser(PostCreateUserInput postCreateUserInput)
         {
             try
             {
@@ -88,7 +88,7 @@ namespace dotnet_api_starter.Controllers
                         }
                     );
 
-                    return true;
+                    return "CreateUser Successful !";
                 }
             }
             catch (Exception ex)
@@ -98,12 +98,24 @@ namespace dotnet_api_starter.Controllers
 
         }
 
-        public async Task<Boolean> UpdateUser(PostUpdateUserInput postUpdateUserInput)
+
+        [HttpPost("UpdateUser")]
+        public async Task<string> UpdateUser(PostUpdateUserInput postUpdateUserInput)
         {
             try
             {
+
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
+
+                    var data = await conn.QueryFirstAsync<GetUserOutput>(@"SELECT * FROM dt_user WHERE user_id =  @user_id", new { user_id = postUpdateUserInput.user_id });
+
+                    if (data == null)
+                    {
+                        return "Not Found Data !";
+                    }
+
+
                     await conn.ExecuteAsync(@"UPDATE dt_user SET user_username = @user_username , user_password = @user_password  WHERE user_id = @user_id",
                         new
                         {
@@ -113,12 +125,39 @@ namespace dotnet_api_starter.Controllers
                         }
                     );
 
-                    return true;
+                    return "UpdateUser Successful !";
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        [HttpGet("DeleteUser/{id}")]
+        public async Task<string> DeleteUser(int id)
+        {
+            try
+            {
+
+                using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
+                {
+
+
+                    await conn.ExecuteAsync(@"DELETE FROM dt_user WHERE user_id = @user_id",
+                         new
+                         {
+                             user_id = id,
+                         }
+                    );
+
+                    return "DeleteUser Successful !";
+                }
+                 
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
     }
