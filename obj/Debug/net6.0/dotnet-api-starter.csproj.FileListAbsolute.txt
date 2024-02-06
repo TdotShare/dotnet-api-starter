@@ -30,3 +30,7 @@ D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\refint\dotnet-api-starter.dl
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\dotnet-api-starter.pdb
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\dotnet-api-starter.genruntimeconfig.cache
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\ref\dotnet-api-starter.dll
+D:\Jobs\ALLWork\dotnet-api-starter\bin\Debug\net6.0\Dapper.dll
+D:\Jobs\ALLWork\dotnet-api-starter\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Jobs\ALLWork\dotnet-api-starter\bin\Debug\net6.0\MySqlConnector.dll
+D:\Jobs\ALLWork\dotnet-api-starter\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
