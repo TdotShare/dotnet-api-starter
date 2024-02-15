@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySqlConnector;
 using System.Collections.Generic;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -159,6 +160,97 @@ namespace dotnet_api_starter.Controllers
             {
                 throw;
             }
+        }
+
+        [HttpPost("UploadAttachedUser")]
+        public async Task<string> UploadAttachedUser([FromForm] PostUploadAttachedUserInput postUploadAttachedUserInput)
+        {
+            try
+            {
+
+                var path = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"Uploads"));
+                this.CreateFolderUpload(path);
+
+                using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
+                {
+
+
+                    if (postUploadAttachedUserInput.FileData != null)
+                    {
+                        using (var fileStream = new FileStream(Path.Combine(path, postUploadAttachedUserInput.FileData.FileName), FileMode.Create))
+                        {
+                            await postUploadAttachedUserInput.FileData.CopyToAsync(fileStream);
+                        }
+
+                        await conn.ExecuteAsync(@"INSERT INTO dt_attach (attachUserId , attachFileName  , attachCreateAt , attachUpdateAt  ) 
+                                              VALUES (@attachUserId , @attachFileName , NOW() , NOW() )",
+                            new
+                            {
+                                attachUserId = postUploadAttachedUserInput.UserId,
+                                attachFileName = postUploadAttachedUserInput.FileData.FileName,
+                            }
+                        );
+
+                        return "UploadAttachedUser Successful !";
+                    }
+                    else
+                    {
+                        return "Not Found FileUpload !!";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        [HttpGet("DeleteUploadAttachedUser/{id}")]
+        public async Task<string> DeleteUploadAttachedUser(int id)
+        {
+            try
+            {
+                using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
+                {
+
+                    var data = await conn.QueryFirstAsync<GetAttachUserOutput>(@"SELECT * FROM dt_attach WHERE attachId = @attachId", new { attachId = id });
+
+                    if (data == null)
+                    {
+                        return "Not Found Data !";
+                    }
+
+                    await conn.ExecuteAsync(@"DELETE FROM dt_attach WHERE attachId = @attachId",
+                         new
+                         {
+                             attachId = id,
+                         }
+                    );
+
+                    var path = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"Uploads\" + data.attachFileName));
+
+                    if (System.IO.File.Exists(path))
+                    {
+                        System.IO.File.Delete(path);
+                    }
+
+                    return "DeleteUploadAttachedUser Successful !";
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+        }
+
+        private void CreateFolderUpload(string path)
+        {
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
         }
     }
 }
