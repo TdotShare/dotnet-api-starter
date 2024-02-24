@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using dotnet_api_starter.Params;
 using dotnet_api_starter.Params.Inputs.User;
 using dotnet_api_starter.Params.Outputs.User;
 using Microsoft.AspNetCore.Http;
@@ -74,7 +75,7 @@ namespace dotnet_api_starter.Controllers
 
 
         [HttpPost("CreateUser")]
-        public async Task<string> CreateUser(PostCreateUserInput postCreateUserInput)
+        public async Task<ResponseMessage> CreateUser(PostCreateUserInput postCreateUserInput)
         {
             try
             {
@@ -89,7 +90,9 @@ namespace dotnet_api_starter.Controllers
                         }
                     );
 
-                    return "CreateUser Successful !";
+                    var LastId = await conn.QueryFirstAsync<int>(@"SELECT MAX(user_id) FROM dt_user");
+
+                    return new ResponseMessage() { bypass = true , msg = "CreateUser Successful !" , data  = LastId.ToString() };
                 }
             }
             catch (Exception ex)
