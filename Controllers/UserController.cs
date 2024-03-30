@@ -56,7 +56,7 @@ namespace dotnet_api_starter.Controllers
             {
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
-                    var data = await conn.QueryAsync<GetUserAllOutput>(@"SELECT * FROM dt_user");
+                    var data = await conn.QueryAsync<GetUserAllOutput>(@"SELECT u.user_id , u.user_title_id , u.user_username , u.user_password , u.user_create_at , u.user_update_at , a.attachFileName FROM dt_user u LEFT JOIN dt_attach a ON u.user_id = a.attachUserId");
 
                     if (data.Count() == 0)
                     {
@@ -245,6 +245,36 @@ namespace dotnet_api_starter.Controllers
                 throw;
             }
 
+        }
+
+
+        [HttpPost("GetSearchUser")]
+        public async Task<IEnumerable<GetSearchUserOutput>> GetSearchUser(PostSearchUserInput postSearchUserInput)
+        {
+            try
+            {
+                using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
+                {
+                    var data = await conn.QueryAsync<GetSearchUserOutput>(@"SELECT u.user_id , u.user_title_id , u.user_username , u.user_password , u.user_create_at , u.user_update_at , a.attachFileName FROM dt_user u LEFT JOIN dt_attach a ON u.user_id = a.attachUserId WHERE user_username LIKE @user_username OR user_password LIKE @user_password", 
+                        new
+                        {
+                            user_username = $"%{postSearchUserInput.searchUser}%",
+                            user_password = $"%{postSearchUserInput.searchUser}%",
+                        });
+
+                    if (data.Count() == 0)
+                    {
+                        return new List<GetSearchUserOutput>();
+                    }
+
+                    return data;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void CreateFolderUpload(string path)

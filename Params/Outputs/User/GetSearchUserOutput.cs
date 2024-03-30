@@ -1,6 +1,6 @@
 ﻿namespace dotnet_api_starter.Params.Outputs.User
 {
-    public class GetUserAllOutput
+    public class GetSearchUserOutput
     {
         public string user_id { get; set; }
         public string user_title_id { get; set; }
