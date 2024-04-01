@@ -104,7 +104,7 @@ namespace dotnet_api_starter.Controllers
 
 
         [HttpPost("UpdateUser")]
-        public async Task<string> UpdateUser(PostUpdateUserInput postUpdateUserInput)
+        public async Task<ResponseMessage> UpdateUser(PostUpdateUserInput postUpdateUserInput)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace dotnet_api_starter.Controllers
 
                     if (data == null)
                     {
-                        return "Not Found Data !";
+                        return new ResponseMessage() { bypass = true, msg = "Not Found Data !", data = "" };
                     }
 
 
@@ -129,7 +129,7 @@ namespace dotnet_api_starter.Controllers
                         }
                     );
 
-                    return "UpdateUser Successful !";
+                    return new ResponseMessage() { bypass = true, msg = "UpdateUser Successful !", data = "" };
                 }
             }
             catch (Exception ex)
@@ -139,7 +139,7 @@ namespace dotnet_api_starter.Controllers
         }
 
         [HttpGet("DeleteUser/{id}")]
-        public async Task<string> DeleteUser(int id)
+        public async Task<ResponseMessage> DeleteUser(int id)
         {
             try
             {
@@ -155,7 +155,8 @@ namespace dotnet_api_starter.Controllers
                          }
                     );
 
-                    return "DeleteUser Successful !";
+
+                    return new ResponseMessage() { bypass = true, msg = "DeleteUser Successful !", data = "" };
                 }
                  
             }
@@ -166,7 +167,7 @@ namespace dotnet_api_starter.Controllers
         }
 
         [HttpPost("UploadAttachedUser")]
-        public async Task<string> UploadAttachedUser([FromForm] PostUploadAttachedUserInput postUploadAttachedUserInput)
+        public async Task<ResponseMessage> UploadAttachedUser([FromForm] PostUploadAttachedUserInput postUploadAttachedUserInput)
         {
             try
             {
@@ -194,11 +195,13 @@ namespace dotnet_api_starter.Controllers
                             }
                         );
 
-                        return "UploadAttachedUser Successful !";
+
+                        return new ResponseMessage() { bypass = true, msg = "UploadAttachedUser Successful !", data = "" };
                     }
                     else
                     {
-                        return "Not Found FileUpload !!";
+                 
+                        return new ResponseMessage() { bypass = true, msg = "Not Found FileUpload !!", data = "" };
                     }
                 }
             }
@@ -209,7 +212,7 @@ namespace dotnet_api_starter.Controllers
         }
 
         [HttpGet("DeleteUploadAttachedUser/{id}")]
-        public async Task<string> DeleteUploadAttachedUser(int id)
+        public async Task<ResponseMessage> DeleteUploadAttachedUser(int id)
         {
             try
             {
@@ -220,7 +223,7 @@ namespace dotnet_api_starter.Controllers
 
                     if (data == null)
                     {
-                        return "Not Found Data !";
+                        return new ResponseMessage() { bypass = true, msg = "Not Found Data !", data = "" };
                     }
 
                     await conn.ExecuteAsync(@"DELETE FROM dt_attach WHERE attachId = @attachId",
@@ -237,7 +240,7 @@ namespace dotnet_api_starter.Controllers
                         System.IO.File.Delete(path);
                     }
 
-                    return "DeleteUploadAttachedUser Successful !";
+                    return new ResponseMessage() { bypass = true, msg = "DeleteUploadAttachedUser Successful !", data = "" };
                 }
             }
             catch (Exception ex)
