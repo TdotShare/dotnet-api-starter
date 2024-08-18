@@ -24,7 +24,6 @@ D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\staticwebassets.pack.json
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\staticwebassets.build.json
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\staticwebassets.development.json
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\scopedcss\bundle\dotnet-api-starter.styles.css
-D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\dotnet-api-starter.csproj.CopyComplete
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\dotnet-api-starter.dll
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\refint\dotnet-api-starter.dll
 D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\dotnet-api-starter.pdb
@@ -34,3 +33,5 @@ D:\Jobs\ALLWork\dotnet-api-starter\bin\Debug\net6.0\Dapper.dll
 D:\Jobs\ALLWork\dotnet-api-starter\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Jobs\ALLWork\dotnet-api-starter\bin\Debug\net6.0\MySqlConnector.dll
 D:\Jobs\ALLWork\dotnet-api-starter\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\dotnet-api-starter.sourcelink.json
+D:\Jobs\ALLWork\dotnet-api-starter\obj\Debug\net6.0\dotnet-a.4BD32A43.Up2Date

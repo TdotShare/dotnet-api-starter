@@ -8,7 +8,6 @@
         public string user_password { get; set; }
         public string user_create_at { get; set; }
         public string user_update_at { get; set; }
-
         public string attachFileName { get; set; }
     }
 }

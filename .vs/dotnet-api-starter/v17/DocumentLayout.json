@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\outputs\\user\\getuseralloutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\outputs\\user\\getuseralloutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetUserAllOutput.cs",
+              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetUserAllOutput.cs",
+              "RelativeDocumentMoniker": "Params\\Outputs\\User\\GetUserAllOutput.cs",
+              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetUserAllOutput.cs",
+              "RelativeToolTip": "Params\\Outputs\\User\\GetUserAllOutput.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T15:23:49.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAgwG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T11:23:40.853Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

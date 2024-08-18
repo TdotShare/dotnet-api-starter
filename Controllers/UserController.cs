@@ -56,7 +56,15 @@ namespace dotnet_api_starter.Controllers
             {
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
-                    var data = await conn.QueryAsync<GetUserAllOutput>(@"SELECT u.user_id , u.user_title_id , u.user_username , u.user_password , u.user_create_at , u.user_update_at , a.attachFileName FROM dt_user u LEFT JOIN dt_attach a ON u.user_id = a.attachUserId");
+                    var data = await conn.QueryAsync<GetUserAllOutput>(@"SELECT 
+                                                                        u.user_id , 
+                                                                        u.user_title_id , 
+                                                                        u.user_username , 
+                                                                        u.user_password , 
+                                                                        u.user_create_at ,
+                                                                        u.user_update_at ,
+                                                                        a.attachFileName 
+                                                                        FROM dt_user u LEFT JOIN dt_attach a ON u.user_id = a.attachUserId");
 
                     if (data.Count() == 0)
                     {
@@ -92,7 +100,7 @@ namespace dotnet_api_starter.Controllers
 
                     var LastId = await conn.QueryFirstAsync<int>(@"SELECT MAX(user_id) FROM dt_user");
 
-                    return new ResponseMessage() { bypass = true , msg = "CreateUser Successful !" , data  = LastId.ToString() };
+                    return new ResponseMessage() { bypass = true, msg = "CreateUser Successful !", data = LastId.ToString() };
                 }
             }
             catch (Exception ex)
@@ -143,10 +151,22 @@ namespace dotnet_api_starter.Controllers
         {
             try
             {
-
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
 
+                    var fileData = await conn.QueryFirstAsync<GetAttachUserOutput>(@"SELECT * FROM dt_attach WHERE attachUserId = @attachUserId", new { attachUserId = id });
+
+                    if (fileData != null)
+                    {
+                        await conn.ExecuteAsync(@"DELETE FROM dt_attach WHERE attachId = @attachId", new {attachId = fileData.attachId,});
+
+                        var path = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"Uploads\" + fileData.attachFileName));
+
+                        if (System.IO.File.Exists(path))
+                        {
+                            System.IO.File.Delete(path);
+                        }
+                    }
 
                     await conn.ExecuteAsync(@"DELETE FROM dt_user WHERE user_id = @user_id",
                          new
@@ -155,10 +175,8 @@ namespace dotnet_api_starter.Controllers
                          }
                     );
 
-
                     return new ResponseMessage() { bypass = true, msg = "DeleteUser Successful !", data = "" };
                 }
-                 
             }
             catch (Exception)
             {
@@ -200,7 +218,7 @@ namespace dotnet_api_starter.Controllers
                     }
                     else
                     {
-                 
+
                         return new ResponseMessage() { bypass = true, msg = "Not Found FileUpload !!", data = "" };
                     }
                 }
@@ -258,7 +276,7 @@ namespace dotnet_api_starter.Controllers
             {
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
-                    var data = await conn.QueryAsync<GetSearchUserOutput>(@"SELECT u.user_id , u.user_title_id , u.user_username , u.user_password , u.user_create_at , u.user_update_at , a.attachFileName FROM dt_user u LEFT JOIN dt_attach a ON u.user_id = a.attachUserId WHERE user_username LIKE @user_username OR user_password LIKE @user_password", 
+                    var data = await conn.QueryAsync<GetSearchUserOutput>(@"SELECT u.user_id , u.user_title_id , u.user_username , u.user_password , u.user_create_at , u.user_update_at , a.attachFileName FROM dt_user u LEFT JOIN dt_attach a ON u.user_id = a.attachUserId WHERE user_username LIKE @user_username OR user_password LIKE @user_password",
                         new
                         {
                             user_username = $"%{postSearchUserInput.searchUser}%",
