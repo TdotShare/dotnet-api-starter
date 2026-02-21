@@ -3,7 +3,7 @@
     public class PostUpdateUserInput
     {
         public string userId { get; set; }
-        public string userFristName { get; set; }
+        public string userFirstName { get; set; }
         public string userLastName { get; set; }
     }
 }

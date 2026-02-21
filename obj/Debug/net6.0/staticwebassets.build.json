@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "C7kk1ZWfLp8tZ7gh1HzBK99V/cWUTVY1Pzgjgro+aXw=",
-  "Source": "dotnet-api-starter",
-  "BasePath": "_content/dotnet-api-starter",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"w2LRVfFax/IyNhWOKKe9LsHAKhVw+Ba893g7R5MwrCk=","Source":"dotnet-api-starter","BasePath":"_content/dotnet-api-starter","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

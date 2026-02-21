@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\inputs\\user\\postupdateuserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\inputs\\user\\postupdateuserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\outputs\\user\\getsearchuseroutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\outputs\\user\\getsearchuseroutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostUpdateUserInput.cs",
+              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostUpdateUserInput.cs",
+              "RelativeDocumentMoniker": "Params\\Inputs\\User\\PostUpdateUserInput.cs",
+              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostUpdateUserInput.cs",
+              "RelativeToolTip": "Params\\Inputs\\User\\PostUpdateUserInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T09:31:33.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-21T08:36:43.938Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAQwEIAAABUAAAAAAAAAA==",
+              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "Controllers\\UserController.cs*",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAIwIwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-20T15:45:25.992Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetSearchUserOutput.cs",
+              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetSearchUserOutput.cs",
+              "RelativeDocumentMoniker": "Params\\Outputs\\User\\GetSearchUserOutput.cs",
+              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetSearchUserOutput.cs",
+              "RelativeToolTip": "Params\\Outputs\\User\\GetSearchUserOutput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T08:18:28.506Z",
+              "EditorCaption": ""
             }
           ]
         }

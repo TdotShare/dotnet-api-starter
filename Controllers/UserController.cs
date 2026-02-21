@@ -88,7 +88,7 @@ namespace dotnet_api_starter.Controllers
             {
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
-                    await conn.ExecuteAsync(@"INSERT INTO quiz_user (userFirstName, userLastName , user_create_at , user_update_at  ) VALUES (@userFirstName,@userLastName , NOW() , NOW() )",
+                    await conn.ExecuteAsync(@"INSERT INTO quiz_user (userFirstName, userLastName , userCreateAt , userUpdateAt  ) VALUES (@userFirstName,@userLastName , NOW() , NOW() )",
                         new
                         {
                             userFirstName = postCreateUserInput.userFirstName,
@@ -132,7 +132,7 @@ namespace dotnet_api_starter.Controllers
                         new
                         {
                             userId = postUpdateUserInput.userId,
-                            userFristName = postUpdateUserInput.userFristName,
+                            userFirstName = postUpdateUserInput.userFirstName,
                             userLastName = postUpdateUserInput.userLastName,
                         }
                     );
@@ -154,7 +154,7 @@ namespace dotnet_api_starter.Controllers
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
 
-                    var fileData = await conn.QueryFirstAsync<GetAttachUserOutput>(@"SELECT * FROM quiz_attach WHERE attachUserId = @attachUserId", new { attachUserId = id });
+                    var fileData = await conn.QueryFirstOrDefaultAsync<GetAttachUserOutput>(@"SELECT * FROM quiz_attach WHERE attachUserId = @attachUserId", new { attachUserId = id });
 
                     if (fileData != null)
                     {
@@ -178,9 +178,9 @@ namespace dotnet_api_starter.Controllers
                     return new ResponseMessage() { bypass = true, msg = "DeleteUser Successful !", data = "" };
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

@@ -7,36 +7,12 @@
       "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\inputs\\user\\postcreateuserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\inputs\\user\\postcreateuserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\inputs\\user\\postsearchuserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\inputs\\user\\postsearchuserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\inputs\\user\\postuploadattacheduserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\inputs\\user\\postuploadattacheduserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\outputs\\user\\getattachuseroutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\outputs\\user\\getattachuseroutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\inputs\\user\\postupdateuserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\inputs\\user\\postupdateuserinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\outputs\\user\\getuseroutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\outputs\\user\\getuseroutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\outputs\\user\\getuseralloutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|solutionrelative:params\\outputs\\user\\getuseralloutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BD5C744-FEDD-4D1F-A8D8-84EA11A45A33}|dotnet-api-starter.csproj|d:\\jobs\\allwork\\dotnet-api-starter\\params\\outputs\\user\\getsearchuseroutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,110 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T08:24:32.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PostUploadAttachedUserInput.cs",
-              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostUploadAttachedUserInput.cs",
-              "RelativeDocumentMoniker": "Params\\Inputs\\User\\PostUploadAttachedUserInput.cs",
-              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostUploadAttachedUserInput.cs",
-              "RelativeToolTip": "Params\\Inputs\\User\\PostUploadAttachedUserInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T08:19:20.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "PostUpdateUserInput.cs",
               "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostUpdateUserInput.cs",
               "RelativeDocumentMoniker": "Params\\Inputs\\User\\PostUpdateUserInput.cs",
               "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostUpdateUserInput.cs",
               "RelativeToolTip": "Params\\Inputs\\User\\PostUpdateUserInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T08:19:20.048Z",
+              "WhenOpened": "2026-02-21T09:31:33.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PostSearchUserInput.cs",
-              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostSearchUserInput.cs",
-              "RelativeDocumentMoniker": "Params\\Inputs\\User\\PostSearchUserInput.cs",
-              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostSearchUserInput.cs",
-              "RelativeToolTip": "Params\\Inputs\\User\\PostSearchUserInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T08:19:18.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PostCreateUserInput.cs",
-              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostCreateUserInput.cs",
-              "RelativeDocumentMoniker": "Params\\Inputs\\User\\PostCreateUserInput.cs",
-              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Inputs\\User\\PostCreateUserInput.cs",
-              "RelativeToolTip": "Params\\Inputs\\User\\PostCreateUserInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T08:19:17.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetUserOutput.cs",
-              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetUserOutput.cs",
-              "RelativeDocumentMoniker": "Params\\Outputs\\User\\GetUserOutput.cs",
-              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetUserOutput.cs",
-              "RelativeToolTip": "Params\\Outputs\\User\\GetUserOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T08:19:01.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetUserAllOutput.cs",
-              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetUserAllOutput.cs",
-              "RelativeDocumentMoniker": "Params\\Outputs\\User\\GetUserAllOutput.cs",
-              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetUserAllOutput.cs",
-              "RelativeToolTip": "Params\\Outputs\\User\\GetUserAllOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T08:19:01.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetAttachUserOutput.cs",
-              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetAttachUserOutput.cs",
-              "RelativeDocumentMoniker": "Params\\Outputs\\User\\GetAttachUserOutput.cs",
-              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetAttachUserOutput.cs",
-              "RelativeToolTip": "Params\\Outputs\\User\\GetAttachUserOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T08:18:26.934Z",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-21T08:36:43.938Z",
               "EditorCaption": ""
             },
             {
@@ -164,14 +62,14 @@
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAcwLsAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-20T15:45:25.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "GetSearchUserOutput.cs",
               "DocumentMoniker": "D:\\Jobs\\ALLWork\\dotnet-api-starter\\Params\\Outputs\\User\\GetSearchUserOutput.cs",
               "RelativeDocumentMoniker": "Params\\Outputs\\User\\GetSearchUserOutput.cs",
