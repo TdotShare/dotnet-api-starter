@@ -2,12 +2,11 @@
 {
     public class GetUserAllOutput
     {
-        public string user_id { get; set; }
-        public string user_title_id { get; set; }
-        public string user_username { get; set; }
-        public string user_password { get; set; }
-        public string user_create_at { get; set; }
-        public string user_update_at { get; set; }
+        public string userId { get; set; }
+        public string userFirstName { get; set; }
+        public string userLastName { get; set; }
+        public string userCreateAt { get; set; }
+        public string userUpdateAt { get; set; }
         public string attachFileName { get; set; }
     }
 }

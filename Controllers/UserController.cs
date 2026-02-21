@@ -32,7 +32,7 @@ namespace dotnet_api_starter.Controllers
             {
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
-                    var data = await conn.QueryFirstAsync<GetUserOutput>(@"SELECT * FROM dt_user WHERE user_id =  @user_id", new { user_id = id });
+                    var data = await conn.QueryFirstAsync<GetUserOutput>(@"SELECT * FROM quiz_user WHERE userId =  @userId", new { userId = id });
 
                     if (data == null)
                     {
@@ -57,14 +57,13 @@ namespace dotnet_api_starter.Controllers
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
                     var data = await conn.QueryAsync<GetUserAllOutput>(@"SELECT 
-                                                                        u.user_id , 
-                                                                        u.user_title_id , 
-                                                                        u.user_username , 
-                                                                        u.user_password , 
-                                                                        u.user_create_at ,
-                                                                        u.user_update_at ,
+                                                                        u.userId , 
+                                                                        u.userFirstName , 
+                                                                        u.userLastName , 
+                                                                        u.userCreateAt ,
+                                                                        u.userUpdateAt ,
                                                                         a.attachFileName 
-                                                                        FROM dt_user u LEFT JOIN dt_attach a ON u.user_id = a.attachUserId");
+                                                                        FROM quiz_user u LEFT JOIN quiz_attach a ON u.userId = a.attachUserId");
 
                     if (data.Count() == 0)
                     {
@@ -89,16 +88,17 @@ namespace dotnet_api_starter.Controllers
             {
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
-                    await conn.ExecuteAsync(@"INSERT INTO dt_user (user_title_id, user_username , user_password , user_create_at , user_update_at  ) VALUES (@user_title_id,@user_username,@user_password , NOW() , NOW() )",
+                    await conn.ExecuteAsync(@"INSERT INTO quiz_user (userFirstName, userLastName , user_create_at , user_update_at  ) VALUES (@userFirstName,@userLastName , NOW() , NOW() )",
                         new
                         {
-                            user_title_id = 1,
-                            user_username = postCreateUserInput.user_username,
-                            user_password = Convert.ToBase64String(Encoding.UTF8.GetBytes(postCreateUserInput.user_password))
+                            userFirstName = postCreateUserInput.userFirstName,
+                            userLastName = postCreateUserInput.userLastName,
                         }
                     );
 
-                    var LastId = await conn.QueryFirstAsync<int>(@"SELECT MAX(user_id) FROM dt_user");
+                    // //userLastName = Convert.ToBase64String(Encoding.UTF8.GetBytes(postCreateUserInput.user_password))
+
+                    var LastId = await conn.QueryFirstAsync<int>(@"SELECT MAX(userId) FROM quiz_user");
 
                     return new ResponseMessage() { bypass = true, msg = "CreateUser Successful !", data = LastId.ToString() };
                 }
@@ -120,7 +120,7 @@ namespace dotnet_api_starter.Controllers
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
 
-                    var data = await conn.QueryFirstAsync<GetUserOutput>(@"SELECT * FROM dt_user WHERE user_id =  @user_id", new { user_id = postUpdateUserInput.user_id });
+                    var data = await conn.QueryFirstAsync<GetUserOutput>(@"SELECT * FROM quiz_user WHERE userId =  @userId", new { userId = postUpdateUserInput.userId });
 
                     if (data == null)
                     {
@@ -128,12 +128,12 @@ namespace dotnet_api_starter.Controllers
                     }
 
 
-                    await conn.ExecuteAsync(@"UPDATE dt_user SET user_username = @user_username , user_password = @user_password  WHERE user_id = @user_id",
+                    await conn.ExecuteAsync(@"UPDATE quiz_user SET userFirstName = @userFirstName , userLastName = @userLastName  WHERE userId = @userId",
                         new
                         {
-                            user_id = postUpdateUserInput.user_id,
-                            user_username = postUpdateUserInput.user_username,
-                            user_password = Convert.ToBase64String(Encoding.UTF8.GetBytes(postUpdateUserInput.user_password))
+                            userId = postUpdateUserInput.userId,
+                            userFristName = postUpdateUserInput.userFristName,
+                            userLastName = postUpdateUserInput.userLastName,
                         }
                     );
 
@@ -154,11 +154,11 @@ namespace dotnet_api_starter.Controllers
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
 
-                    var fileData = await conn.QueryFirstAsync<GetAttachUserOutput>(@"SELECT * FROM dt_attach WHERE attachUserId = @attachUserId", new { attachUserId = id });
+                    var fileData = await conn.QueryFirstAsync<GetAttachUserOutput>(@"SELECT * FROM quiz_attach WHERE attachUserId = @attachUserId", new { attachUserId = id });
 
                     if (fileData != null)
                     {
-                        await conn.ExecuteAsync(@"DELETE FROM dt_attach WHERE attachId = @attachId", new {attachId = fileData.attachId,});
+                        await conn.ExecuteAsync(@"DELETE FROM quiz_attach WHERE attachId = @attachId", new {attachId = fileData.attachId,});
 
                         var path = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"Uploads\" + fileData.attachFileName));
 
@@ -168,10 +168,10 @@ namespace dotnet_api_starter.Controllers
                         }
                     }
 
-                    await conn.ExecuteAsync(@"DELETE FROM dt_user WHERE user_id = @user_id",
+                    await conn.ExecuteAsync(@"DELETE FROM quiz_user WHERE userId = @userId",
                          new
                          {
-                             user_id = id,
+                             userId = id,
                          }
                     );
 
@@ -196,7 +196,6 @@ namespace dotnet_api_starter.Controllers
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
 
-
                     if (postUploadAttachedUserInput.FileData != null)
                     {
                         using (var fileStream = new FileStream(Path.Combine(path, postUploadAttachedUserInput.FileData.FileName), FileMode.Create))
@@ -204,7 +203,7 @@ namespace dotnet_api_starter.Controllers
                             await postUploadAttachedUserInput.FileData.CopyToAsync(fileStream);
                         }
 
-                        await conn.ExecuteAsync(@"INSERT INTO dt_attach (attachUserId , attachFileName  , attachCreateAt , attachUpdateAt  ) 
+                        await conn.ExecuteAsync(@"INSERT INTO quiz_attach (attachUserId , attachFileName  , attachCreateAt , attachUpdateAt  ) 
                                               VALUES (@attachUserId , @attachFileName , NOW() , NOW() )",
                             new
                             {
@@ -237,14 +236,14 @@ namespace dotnet_api_starter.Controllers
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
 
-                    var data = await conn.QueryFirstAsync<GetAttachUserOutput>(@"SELECT * FROM dt_attach WHERE attachId = @attachId", new { attachId = id });
+                    var data = await conn.QueryFirstAsync<GetAttachUserOutput>(@"SELECT * FROM quiz_attach WHERE attachId = @attachId", new { attachId = id });
 
                     if (data == null)
                     {
                         return new ResponseMessage() { bypass = true, msg = "Not Found Data !", data = "" };
                     }
 
-                    await conn.ExecuteAsync(@"DELETE FROM dt_attach WHERE attachId = @attachId",
+                    await conn.ExecuteAsync(@"DELETE FROM quiz_attach WHERE attachId = @attachId",
                          new
                          {
                              attachId = id,
@@ -276,11 +275,11 @@ namespace dotnet_api_starter.Controllers
             {
                 using (var conn = new MySqlConnection(_configuration.GetConnectionString("Default")))
                 {
-                    var data = await conn.QueryAsync<GetSearchUserOutput>(@"SELECT u.user_id , u.user_title_id , u.user_username , u.user_password , u.user_create_at , u.user_update_at , a.attachFileName FROM dt_user u LEFT JOIN dt_attach a ON u.user_id = a.attachUserId WHERE user_username LIKE @user_username OR user_password LIKE @user_password",
+                    var data = await conn.QueryAsync<GetSearchUserOutput>(@"SELECT u.userId , u.userFirstName , u.userLastName , u.userCreateAt , u.userUpdateAt , a.attachFileName FROM quiz_user u LEFT JOIN dt_attach a ON u.userId = a.attachUserId WHERE userFirstName LIKE @userFirstName OR userLastName LIKE @userLastName",
                         new
                         {
-                            user_username = $"%{postSearchUserInput.searchUser}%",
-                            user_password = $"%{postSearchUserInput.searchUser}%",
+                            userFirstName = $"%{postSearchUserInput.searchUser}%",
+                            userLastName = $"%{postSearchUserInput.searchUser}%",
                         });
 
                     if (data.Count() == 0)
